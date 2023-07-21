@@ -1,0 +1,17 @@
+{
+  "name": "tailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "tailwindcss": "^3.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "production": "npx tailwindcss -i ./src/css/styles.css -o ./dist/tailwind.css --minify",
+    "watch": "npx tailwindcss -i ./src/css/styles.css -o ./dist/tailwind.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Denis Mekina",
+  "license": "ISC"
+}
