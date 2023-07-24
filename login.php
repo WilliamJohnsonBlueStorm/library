@@ -3,10 +3,8 @@
 <?php include('components/globals/header.php') ?>
 
 <?php
-    include("scripts/config.php");
 
-
-if($_SERVER["REQUEST_METHOD"] == "POST") {
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
         // username and password sent from form
 
         $myusername = $_POST['username'];
@@ -20,7 +18,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             while($row = $result->fetch_assoc()) {
             $_SESSION['login_user'] = $myusername;
 
-            header("location: welcome.php");
+            header("location: index.php");
             }
         } else {
             $error = "Your Login Name or Password is invalid";

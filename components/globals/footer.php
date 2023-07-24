@@ -1,8 +1,9 @@
 <footer class="absolute bottom-0 w-full">
     <div class="w-full bg-brand-brown flex justify-between items-center">
+
         <ul class="text-brand-beige flex">
             <li class="py-4 px-8 inline-block">Available credits (0)</a></li>
-            <li><a href="/add-credits" title="Borrowed Books" aria-label="Borrowed Books" class="py-4 px-8 inline-block">Add more Credits</a></li>
+            <li><a href="/add-credits.php" title="Add credits" aria-label="Add credits" class="py-4 px-8 inline-block">Add more Credits</a></li>
         </ul>
 
 
@@ -11,7 +12,7 @@
         <?php }
 
         else { ?>
-            <a href="/login.php" title="log in" aria-label="log in" class="py-4 px-8 inline-block text-brand-beige">You are not logged in</a>
+            <a href="/index.php" title="log in" aria-label="log in" class="py-4 px-8 inline-block text-brand-beige">You are not logged in</a>
         <?php } ?>
     </div>
 </footer>
