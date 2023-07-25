@@ -29,7 +29,7 @@
                                 $_SESSION['credit'] = $newCredits;
 
                                 if ($conn->query($sql) === TRUE) {
-                                    echo "Your credits have been added sucessfully";
+                                    echo "You have successfully added credit to your account";
                                 } else {
                                     echo "Error: " . $sql . "<br>" . $conn->error;
                                 }
