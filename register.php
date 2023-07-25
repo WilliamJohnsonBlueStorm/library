@@ -47,14 +47,13 @@
     }
 ?>
 
-
     <main aria-labelledby="main-title">
         <div class="container">
             <div class="flex items-center justify-center flex-col bg-brand-brown rounded-lg p-12">
                 <h1 id="main-title" class="text-h1-desktop mb-8 text-brand-beige">Bluestorm Library Account Register</h1>
 
                 <div class="container">
-                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="text-brand-beige flex flex-col mb-8">
+                    <form id="registerform" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="text-brand-beige flex flex-col mb-8">
 
                         <?php if($invalid) { ?>
                             <div class="form-errors mb-8">

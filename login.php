@@ -10,13 +10,14 @@
         $myusername = $_POST['username'];
         $mypassword = $_POST['password'];
 
-        $sql = "SELECT username, password FROM users WHERE username='$myusername' AND password='$mypassword'";
+        $sql = "SELECT username, password, credit FROM users WHERE username='$myusername' AND password='$mypassword'";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
             $_SESSION['login_user'] = $myusername;
+            $_SESSION['credit'] = $row['credit'];
 
             header("location: index.php");
             }

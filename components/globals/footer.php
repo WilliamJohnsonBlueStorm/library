@@ -1,14 +1,21 @@
-<footer class="absolute bottom-0 w-full">
+<footer class="">
     <div class="w-full bg-brand-brown flex justify-between items-center">
 
         <ul class="text-brand-beige flex">
-            <li class="py-4 px-8 inline-block">Available credits (0)</a></li>
-            <li><a href="/add-credits.php" title="Add credits" aria-label="Add credits" class="py-4 px-8 inline-block">Add more Credits</a></li>
+            <li class="py-4 px-8 inline-block">
+                <?php if(isset($_SESSION['credit'])) { ?>
+                    Available credits (<?php echo $_SESSION['credit'] ?>)
+
+            </li>
+            <li>
+                <a href="/add-credits.php" title="Add credits" aria-label="Add credits" class="py-4 px-8 inline-block">Add more Credits</a>
+            </li>
+            <?php } ?>
         </ul>
 
 
         <?php if(isset($_SESSION['login_user'])) { ?>
-            <a href="/logout.php" title="Log Out" aria-label="Log Out" class="py-4 px-8 inline-block text-brand-beige">Log Out: <?php echo($_SESSION['login_user']); ?></a>
+            <a href="/logout.php" title="Log Out" aria-label="Log Out" class="py-4 px-8 inline-block text-brand-beige">Click here to Log Out --> <?php echo($_SESSION['login_user']); ?></a>
         <?php }
 
         else { ?>
