@@ -1,4 +1,4 @@
-<body>
+<body class="relative min-h-screen flex flex-col">
 
 <!--<img src="images/library.jpeg" alt="library background" class="w-screen h-screen relative">-->
 <!--<div class="backdrop-blur absolute inset-0"></div>-->

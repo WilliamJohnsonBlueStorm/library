@@ -1,4 +1,4 @@
-<footer class="">
+<footer class="w-full absolute bottom-0">
     <div class="w-full bg-brand-brown flex justify-between items-center">
 
         <ul class="text-brand-beige flex">

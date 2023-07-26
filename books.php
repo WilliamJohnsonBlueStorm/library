@@ -7,10 +7,9 @@
         $result = $conn->query($sql);
 ?>
 
-
-    <main aria-labelledby="main-title">
+    <main aria-labelledby="main-title" class="my-auto">
         <div class="container">
-            <div class="flex items-center justify-center flex-col bg-brand-brown rounded-lg p-12">
+            <div class="flex items-center justify-center flex-col bg-brand-brown rounded-lg p-12 my-20">
                 <h1 id="main-title" class="text-h1-desktop mb-8 text-brand-beige">Available Books</h1>
                 <div class="container">
                     <ul class="grid grid-cols-6 gap-4">
@@ -50,11 +49,8 @@
                             $newCredits = $_SESSION['credit']-$price;
                             $myUsername = $_SESSION['login_user'];
 
-
                             $bookId = $_POST['id'];
                             $amount = $_POST['availability']-1;
-
-                            $updateCredit = "UPDATE users SET credit = '$newCredits' WHERE username = '$myUsername'";
 
                             if ($_SESSION['credit'] < $_POST['price']) {
 
@@ -63,11 +59,14 @@
                             } else {
 
                                 $updateAvailability = "UPDATE books SET availability = '$amount', borrowed_by = '$myUsername' WHERE id = '$bookId'";
+                                $updateCredit = "UPDATE users SET credit = '$newCredits' WHERE username = '$myUsername'";
+
                                 ($conn->query($updateCredit) === TRUE) && ($conn->query($updateAvailability) === TRUE);
                                 $_SESSION['credit'] = $newCredits;
 
                                 echo "You have successfully borrowed this book!";
                             }
+
                         }
                         ?>
                     </ul>

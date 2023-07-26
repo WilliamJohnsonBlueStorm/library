@@ -3,7 +3,7 @@
 <?php include('components/globals/header.php') ?>
 
 
-    <main aria-labelledby="main-title">
+    <main aria-labelledby="main-title" class="my-auto">
         <div class="container">
             <div class="flex items-center justify-center flex-col bg-brand-brown rounded-lg p-12">
                 <h1 id="main-title" class="text-h1-desktop mb-8 text-brand-beige">Add Credits</h1>

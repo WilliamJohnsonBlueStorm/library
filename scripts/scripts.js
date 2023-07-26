@@ -14,13 +14,3 @@ $("#registerform").submit(function() {
             return false;
         }
 });
-
-// $(".book-listing").click(function() {
-//     if (confirm('Are you sure you want rent this book?')) {
-//         // Save it!
-//         console.log('Thing was saved to the database.');
-//     } else {
-//         // Do nothing!
-//         console.log('Thing was not saved to the database.');
-//     }
-// });

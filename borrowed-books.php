@@ -8,10 +8,10 @@
 ?>
 
 
-    <main aria-labelledby="main-title">
+    <main aria-labelledby="main-title" class="my-auto">
         <div class="container">
             <div class="flex items-center justify-center flex-col bg-brand-brown rounded-lg p-12">
-                <h1 id="main-title" class="text-h1-desktop mb-8 text-brand-beige">Available Books</h1>
+                <h1 id="main-title" class="text-h1-desktop mb-8 text-brand-beige">Borrowed Books</h1>
                 <div class="container">
                     <ul class="grid grid-cols-6 gap-4">
                         <?php
