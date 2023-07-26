@@ -3,7 +3,6 @@
 <?php include('components/globals/header.php') ?>
 
     <?php
-
         $sql = "SELECT * FROM books";
         $result = $conn->query($sql);
 ?>
@@ -51,6 +50,7 @@
                             $newCredits = $_SESSION['credit']-$price;
                             $myUsername = $_SESSION['login_user'];
 
+
                             $bookId = $_POST['id'];
                             $amount = $_POST['availability']-1;
 
@@ -62,8 +62,7 @@
 
                             } else {
 
-                                $updateAvailability = "UPDATE books SET availability = '$amount' WHERE id = '$bookId'";
-
+                                $updateAvailability = "UPDATE books SET availability = '$amount', borrowed_by = '$myUsername' WHERE id = '$bookId'";
                                 ($conn->query($updateCredit) === TRUE) && ($conn->query($updateAvailability) === TRUE);
                                 $_SESSION['credit'] = $newCredits;
 
